@@ -1,0 +1,38 @@
+
+
+
+conf t
+
+
+ip domain-name matrix.com
+
+crypto key generate rsa general-keys modulus 1024
+
+username tison priv 15 secr cisco12345
+
+
+int f0/0
+
+ip add 192.168.12.1 255.255.255.0
+
+no sh
+
+int f3/0
+
+ip add 172.16.11.1 255.255.255.0
+
+no sh
+
+line vty 0 4
+
+login local
+
+transport input ssh
+
+end
+
+
+wr
+
+
+

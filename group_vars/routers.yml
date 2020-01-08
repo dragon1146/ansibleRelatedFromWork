@@ -1,0 +1,7 @@
+---
+
+
+base_provider:
+   username: tison
+   password: cisco12345
+   hosts: routers

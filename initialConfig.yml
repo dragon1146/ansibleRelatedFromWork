@@ -1,0 +1,14 @@
+---
+
+
+- name: PLAY 1 GENEREATE INITIAL CONFIG FILES FOR R1 R2
+  hosts: routers
+  connection: local
+  gather_facts: no
+
+
+  tasks:
+     - name: TASK 1 GENERATE INITIAL CONFIG FILES FOR R1
+       template:
+          src: "./templates/r1_temp.yml"
+          dest: "./renderedConfigs/routers/r1.cfg"
