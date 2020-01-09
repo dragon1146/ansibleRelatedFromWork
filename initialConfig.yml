@@ -1,14 +1,20 @@
 ---
 
 
-- name: PLAY 1 GENEREATE INITIAL CONFIG FILES FOR R1 R2
-  hosts: routers
+- name: PLAY 1 GENEREATE INITIAL CONFIG FILES FOR R1 USING ROLES MODULE
+  hosts: localhost
   connection: local
-  gather_facts: no
+  # gather_facts: no
 
 
-  tasks:
-     - name: TASK 1 GENERATE INITIAL CONFIG FILES FOR R1
-       template:
-          src: "./templates/r1_temp.yml"
-          dest: "./renderedConfigs/routers/r1.cfg"
+  roles:
+    - r1
+    # - name: TASK 1 GENERATE INITIAL CONFIG FILES FOR R1
+    #    template:
+    #       src: "./templates/r1_temp.j2" 
+    #       dest: "./renderedConfigs/routers/r1.cfg"
+
+    # - name: TASK 1 GENERATE INITIAL CONFIG FILES FOR R2
+    #    template:
+    #       src: "./templates/r1_temp.j2"
+    #       dest: "./renderedConfigs/routers/r2.cfg"

@@ -1,0 +1,14 @@
+---
+# tasks file for r1
+# - name: PLAY 1 GENEREATE INITIAL CONFIG FILES FOR R1 R2
+#   hosts: 172.16.11.1
+#   connection: local
+#   gather_facts: no
+
+
+#   tasks:
+- name: TASK 1 GENERATE INITIAL CONFIG FILES FOR R1
+  template:
+     src: "~/Desktop/ansibleRelated/mgmtNet-ansible-01/r1/templates/r1_temp.j2"
+     dest: "~/Desktop/ansibleRelated/mgmtNet-ansible-01/renderedConfigs/routers/r1.cfg"
+  with_items: "{{ r1 }}"

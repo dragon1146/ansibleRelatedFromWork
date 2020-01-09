@@ -1,15 +1,12 @@
 ---
-
+# vars file for r1
 r1:
    - interfaceF00: f0/0
      f00_ipaddr: 192.168.12.1
-     f00_mask: 255.255.255.0
-     
-   - interfaceL0: loopback 0
+     f00_mask: 255.255.255.0     
+     interfaceL0: loopback 0
      loopback0_ipaddr: 10.100.1.1
      loopback0_mask: 255.255.255.0
-
-   - interfaceL1: loopback 1
+     interfaceL1: loopback 1
      loopback1_ipaddr: 10.100.2.1
      loopback1_mask: 255.255.255.0
-

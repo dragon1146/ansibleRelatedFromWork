@@ -1,0 +1,11 @@
+interface {{ item.interfaceF00 }}
+ip address {{ item.f00_ipaddr }} {{ item.f00_mask }}
+no shut
+
+interface {{ item.interfaceL0 }}
+ip address {{ item.loopback0_ipaddr }} {{ item.loopback0_mask }}
+no shut
+
+interface {{ item.interfaceL1 }}
+ip address {{ item.loopback1_ipaddr }} {{ item.loopback1_mask }}
+no shut
