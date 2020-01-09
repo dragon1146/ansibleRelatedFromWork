@@ -1,7 +1,7 @@
 ---
 
 
-- name: PLAY 1 GENEREATE INITIAL CONFIG FILES FOR R1 USING ROLES MODULE
+- name: PLAY 1 GENEREATE INITIAL CONFIG FILES FOR R1 AND R2 USING ROLES MODULE
   hosts: localhost
   connection: local
   # gather_facts: no
@@ -9,6 +9,7 @@
 
   roles:
     - r1
+    - r2
     # - name: TASK 1 GENERATE INITIAL CONFIG FILES FOR R1
     #    template:
     #       src: "./templates/r1_temp.j2" 

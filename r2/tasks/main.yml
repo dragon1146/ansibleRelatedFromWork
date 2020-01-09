@@ -1,0 +1,7 @@
+---
+# tasks file for r2
+- name: TASK 1 GENERATE INITIAL CONFIG FILES FOR R2
+  template:
+     src: "~/Desktop/ansibleRelated/mgmtNet-ansible-01/r2/templates/r2_temp.j2"
+     dest: "~/Desktop/ansibleRelated/mgmtNet-ansible-01/renderedConfigs/routers/r2.cfg"
+  with_items: "{{ r2 }}"
