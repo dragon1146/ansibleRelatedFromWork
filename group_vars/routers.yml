@@ -1,7 +1,12 @@
 ---
 
 
-base_provider:
+r1_provider:
    username: tison
    password: cisco12345
-   hosts: routers
+   hosts: 172.16.11.1
+
+r2_provider:
+   username: tison
+   password: cisco12345
+   hosts: 172.16.11.2

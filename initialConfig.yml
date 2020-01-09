@@ -4,7 +4,7 @@
 - name: PLAY 1 GENEREATE INITIAL CONFIG FILES FOR R1 AND R2 USING ROLES MODULE
   hosts: localhost
   connection: local
-  # gather_facts: no
+  gather_facts: no
 
 
   roles:
