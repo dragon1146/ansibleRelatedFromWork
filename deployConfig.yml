@@ -1,0 +1,19 @@
+---
+
+
+-  name: PLAY 1 DEPLOY RENDERED CONFIG TO R1 AND R2
+   connnection: local
+   gather_facts: no
+
+
+   tasks:
+      - name: TASK 1 DEPLOY RENDERED CONFIG TO R1
+        ios_config:
+           src: "./renderedConfigs/routers/r1.cfg"
+           provider: {{ r1_provider }}
+
+
+      - name: TASK2 DEPLOY RENDERED CONFIG TO R2
+        ios_config:
+           src: "./renderedConfigs/routers/r2.cfg"
+           provider: {{ r2_provider }}
